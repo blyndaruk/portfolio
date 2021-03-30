@@ -19,6 +19,8 @@
 
 
 
+
+
 <style>
 .NuxtLogo {
   animation: 1s appear;
