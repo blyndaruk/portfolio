@@ -2,6 +2,11 @@
   <div class="container">
     <div>
       <Smoke />
+      <VButton
+        :text="'Portfolio'"
+        :url="'/portfolio'"
+        :class="'button--portfolio'"
+      />
     </div>
   </div>
 </template>
@@ -17,6 +22,7 @@ export default Vue.extend({})
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;

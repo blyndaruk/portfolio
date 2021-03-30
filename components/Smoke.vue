@@ -21,6 +21,11 @@ export default {
       onResizeDebounced: debounce(this.onResize, 800),
     }
   },
+  computed: {
+    screenWidth() {
+      return this.$mq
+    },
+  },
   mounted() {
     this.init()
     this.animate()
@@ -59,7 +64,10 @@ export default {
       })
       this.mesh = new THREE.Mesh(this.geometry, this.material)
 
-      const textGeo = new THREE.PlaneGeometry(250, 74)
+      const imgWidth = this.screenWidth === 'sm' ? 120 : 250
+      const imgHeight = this.screenWidth === 'sm' ? 36 : 74
+
+      const textGeo = new THREE.PlaneGeometry(imgWidth, imgHeight)
       THREE.ImageUtils.crossOrigin = '' // Need this to pull in crossdomain images from AWS
       const textTexture = THREE.ImageUtils.loadTexture('/nd-full.svg')
       const textMaterial = new THREE.MeshLambertMaterial({
@@ -118,7 +126,7 @@ export default {
     evolveSmoke() {
       this.sp = this.smokeParticles.length
       while (this.sp--) {
-        this.smokeParticles[this.sp].rotation.z += this.delta * 0.2
+        this.smokeParticles[this.sp].rotation.z += this.delta * 0.12
       }
     },
   },

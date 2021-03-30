@@ -33,7 +33,17 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    'nuxt-mq',
   ],
+
+  mq: {
+    defaultBreakpoint: 'sm',
+    breakpoints: {
+      sm: 599,
+      md: 1024,
+      lg: Infinity,
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
@@ -42,6 +52,9 @@ export default {
   pwa: {
     manifest: {
       lang: 'en',
+    },
+    icon: {
+      sizes: [16, 32, 64, 120, 144, 152, 192, 384, 512],
     },
   },
 
