@@ -114,11 +114,5 @@ export default {
       }
     }
   }
-
-  &--portfolio {
-    position: fixed;
-    bottom: 3vw;
-    right: 3vw;
-  }
 }
 </style>

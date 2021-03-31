@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="smoke">
     <div ref="canvas" />
   </div>
 </template>
@@ -42,12 +42,17 @@ export default {
     },
     init() {
       this.clock = new THREE.Clock()
-
       this.renderer = new THREE.WebGLRenderer()
       this.renderer.setSize(window.innerWidth, window.innerHeight)
-
       this.scene = new THREE.Scene()
 
+      this.addCamera()
+      this.addText()
+      this.addSmoke()
+
+      this.$refs.canvas.parentNode.appendChild(this.renderer.domElement)
+    },
+    addCamera() {
       this.camera = new THREE.PerspectiveCamera(
         75,
         window.innerWidth / window.innerHeight,
@@ -56,16 +61,18 @@ export default {
       )
       this.camera.position.z = 1000
       this.scene.add(this.camera)
-
-      // this.geometry = new THREE.CubeGeometry(200, 200, 200)
+    },
+    addText() {
       this.material = new THREE.MeshLambertMaterial({
         color: 0xaa6666,
         wireframe: false,
       })
       this.mesh = new THREE.Mesh(this.geometry, this.material)
 
-      const imgWidth = this.screenWidth === 'sm' ? 120 : 250
-      const imgHeight = this.screenWidth === 'sm' ? 36 : 74
+      const imgWidth =
+        this.screenWidth === 'sm' || this.screenWidth === 'xs' ? 120 : 250
+      const imgHeight =
+        this.screenWidth === 'sm' || this.screenWidth === 'xs' ? 36 : 74
 
       const textGeo = new THREE.PlaneGeometry(imgWidth, imgHeight)
       THREE.ImageUtils.crossOrigin = '' // Need this to pull in crossdomain images from AWS
@@ -84,10 +91,9 @@ export default {
       this.light = new THREE.DirectionalLight(0xffffff, 0.8)
       this.light.position.set(-1, 0, 1)
       this.scene.add(this.light)
-
-      this.smokeTexture = THREE.ImageUtils.loadTexture(
-        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png'
-      )
+    },
+    addSmoke() {
+      this.smokeTexture = THREE.ImageUtils.loadTexture('/smoke.png')
       this.smokeMaterial = new THREE.MeshLambertMaterial({
         color: 0x00dddd,
         map: this.smokeTexture,
@@ -107,8 +113,6 @@ export default {
         this.scene.add(this.particle)
         this.smokeParticles.push(this.particle)
       }
-
-      this.$refs.canvas.parentNode.appendChild(this.renderer.domElement)
     },
     render() {
       this.mesh.rotation.x += 0.005
@@ -132,3 +136,13 @@ export default {
   },
 }
 </script>
+
+<style lang="scss">
+.smoke {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+</style>

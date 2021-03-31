@@ -68,7 +68,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['@/assets/styles/index.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -94,13 +94,16 @@ export default {
   ],
 
   mq: {
-    defaultBreakpoint: 'sm',
+    defaultBreakpoint: 'xs',
     breakpoints: {
-      sm: 599,
-      md: 1024,
+      xs: 599,
+      sm: 767,
+      md: 1023,
       lg: Infinity,
     },
   },
+
+  pageTransition: 'page',
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
