@@ -3,8 +3,8 @@
     <div>
       <div class="home__actions">
         <VButton :text="'Resume'" :url="'/resume'" />
-        <VButton :text="'Contacts'" :url="'/contacts'" />
-        <VButton :text="'Portfolio'" :url="'/portfolio'" />
+        <!--        <VButton :text="'Contacts'" :url="'/contacts'" />-->
+        <!--        <VButton :text="'Portfolio'" :url="'/portfolio'" />-->
       </div>
     </div>
   </div>

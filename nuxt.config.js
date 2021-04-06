@@ -60,7 +60,22 @@ export default {
         href: process.env.PUBLIC_SITE_URL,
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Iceland&display=swap',
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap',
+      },
+    ],
   },
 
   env: {
@@ -69,6 +84,10 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['@/assets/styles/index.scss'],
+
+  styleResources: {
+    scss: '@/assets/styles/helpers/_helpers.scss',
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -82,6 +101,8 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/svg',
+    '@nuxtjs/style-resources',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

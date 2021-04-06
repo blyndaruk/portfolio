@@ -1,6 +1,6 @@
 <template>
-  <div class="resume">
-    <PageBox title="Resume" />
+  <div class="resume-page">
+    <Resume />
   </div>
 </template>
 

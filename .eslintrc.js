@@ -15,5 +15,6 @@ module.exports = {
   // add your custom rules here
   rules: {
     'unicorn/number-literal-case': 'off',
+    'vue/no-v-html': 'off',
   },
 }

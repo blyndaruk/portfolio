@@ -2,44 +2,55 @@
   display: grid;
   min-height: 100vh;
   width: 100%;
-  padding: 60px 100px;
   color: #fff;
   font-size: 30px;
   @include sm {
     padding: 20px;
   }
 
+  @include xs {
+    padding: 0;
+  }
+
   &__inner {
-    max-width: 75vw;
+    position: relative;
     margin: 0 auto;
     height: 100%;
     width: 100%;
-    background-color: rgba(#181A1C, 0.65);
-    border-radius: 10px;
+    background-color: rgba(#181A1C, 0.95);
     @include sm {
       max-width: 100%;
     }
   }
 
   &__doc {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     min-height: 100%;
     width: 100%;
-    padding: 50px;
     background-image: url('@/static/texture.png');
     color: #fff;
     font-size: 30px;
+    font-family: 'Iceland', cursive;
   }
 
-  &__top {
-    margin-top: auto;
+  &__content {
+    padding: 44px 6vw;
+    @include xs {
+      padding: 0;
+    }
   }
 
-  &__bottom {
+  &__back {
+    position: absolute;
+    top: 4.4vw;
+    right: 8vw;
     margin-top: auto;
     color: #181a1c;
+    @include xs {
+      position: fixed;
+      bottom: 3vw;
+      top: auto;
+      right: 6vw;
+      opacity: 0.5;
+    }
   }
 }

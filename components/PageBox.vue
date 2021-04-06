@@ -2,11 +2,10 @@
   <div class="box">
     <div class="box__inner">
       <div class="box__doc">
-        <div class="box__top">
-          <div>{{ title }}</div>
+        <div class="box__content">
           <slot></slot>
         </div>
-        <div class="box__bottom">
+        <div class="box__back">
           <VButton url="/" text="Home" />
         </div>
       </div>
