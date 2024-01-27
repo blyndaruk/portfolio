@@ -14,19 +14,35 @@ export default {
       skills: [
         {
           name: 'HTML',
-          perc: '80',
+          perc: '95',
         },
         {
           name: 'CSS',
-          perc: '70',
+          perc: '90',
         },
         {
           name: 'SCSS',
-          perc: '64',
+          perc: '90',
         },
         {
           name: 'JS',
-          perc: '55',
+          perc: '80',
+        },
+        {
+          name: 'React',
+          perc: '76',
+        },
+        {
+          name: 'Next.js',
+          perc: '72',
+        },
+        {
+          name: 'Vue',
+          perc: '65',
+        },
+        {
+          name: 'Nuxt',
+          perc: '45',
         },
         {
           name: 'PHP',
@@ -41,23 +57,11 @@ export default {
           perc: '53',
         },
         {
-          name: 'React',
-          perc: '35',
-        },
-        {
-          name: 'Vue',
-          perc: '65',
-        },
-        {
-          name: 'Nuxt',
-          perc: '35',
-        },
-        {
           name: 'Webpack',
-          perc: '35',
+          perc: '55',
         },
         {
-          name: 'Optimization',
+          name: 'Optimize',
           perc: '75',
         },
         {
@@ -65,9 +69,9 @@ export default {
           perc: '70',
         },
       ],
-    }
+    };
   },
-}
+};
 </script>
 
 <style scoped lang="scss">

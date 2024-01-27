@@ -1,0 +1,122 @@
+.resume {
+  display: flex;
+  @include md {
+    display: block;
+  }
+
+  &__aside {
+    width: 30%;
+    flex-shrink: 0;
+    background-color: rgba(#1d2126, 0.5);
+    //background-color: rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 6px;
+    @include md {
+      width: 100%;
+    }
+    @include xs {
+      padding: 20px;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    margin-left: 40px;
+    @include md {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+  }
+
+  &__photo {
+    max-width: 240px;
+    margin: 0 auto 20px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__name {
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    text-align: center;
+    color: #dddade;
+
+    b {
+      font-style: normal;
+    }
+  }
+
+  &__position {
+    margin-top: 14px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: #aba7ae;
+  }
+
+  &__profile {
+    margin-top: 70px;
+    @include xs {
+      margin-top: 45px;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 23px;
+      line-height: 1.2;
+
+      @include xs {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__info-block {
+    padding: 40px;
+    border-radius: 6px;
+    background-color: #2b2f35;
+    @include xs {
+      padding: 20px;
+      border-radius: 0;
+    }
+
+    & + & {
+      margin-top: 40px;
+    }
+
+    .icon-heading {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__contacts {
+    margin-top: 60px;
+
+    .icon-heading {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__socials {
+    margin-top: 60px;
+
+    .icon-heading {
+      margin-bottom: 20px;
+
+      svg {
+        width: 1.2em;
+      }
+    }
+  }
+
+  &__stack {
+    margin-top: 20px;
+    font-size: 20px;
+
+    p + p {
+      margin-top: 5px !important;
+    }
+  }
+}
