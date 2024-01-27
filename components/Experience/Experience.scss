@@ -1,0 +1,55 @@
+
+.experience {
+  padding: 24px 0;
+  font-family: 'Raleway', sans-serif;
+
+  & + & {
+    border-top: 1px solid #35383e;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: baseline;
+    @include xs {
+      display: block;
+    }
+  }
+
+  &__place {
+    font-weight: bold;
+    margin-right: 14px;
+  }
+
+  &__dates {
+    font-style: italic;
+    font-size: 18px;
+    @include xs {
+      margin-top: 8px;
+    }
+    span {
+      @include xs {
+        display: none;
+      }
+    }
+  }
+
+  &__position {
+    margin-top: 4px;
+    font-size: 22px;
+    font-style: italic;
+    color: #9a5769;
+    @include xs {
+      margin-top: 10px;
+    }
+  }
+
+  &__content {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #aaacb5;
+    line-height: 1.6;
+    @include xs {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.education {
+  position: relative;
+  padding-left: 50px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  margin-left: 25px;
+  font-family: 'Raleway', sans-serif;
+  @include xs {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 60%;
+    background-color: currentColor;
+    @include xs {
+      top: 19px;
+      left: -20px;
+      height: 45px;
+      transform: translateY(0);
+      width: 4px;
+    }
+  }
+
+  & + & {
+    border-top: 1px solid #35383e;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: baseline;
+    @include xs {
+      display: block;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    margin-right: 14px;
+    color: #fff;
+    font-size: 24px;
+  }
+
+  &__dates {
+    font-style: italic;
+    font-size: 18px;
+    color: #fff;
+    @include xs {
+      margin-top: 6px;
+      font-size: 16px;
+    }
+    span {
+      @include xs {
+        display: none;
+      }
+    }
+  }
+
+  &__place {
+    margin-top: 4px;
+    font-size: 18px;
+    font-style: italic;
+    color: #9a5769;
+    @include xs {
+      font-size: 16px;
+    }
+  }
+}
