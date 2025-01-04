@@ -16,6 +16,20 @@
             />
 
             <Experience
+              place="Materialize Labs"
+              dates="FEB 2023 - present"
+              position="FullStack Developer"
+            >
+              Fullstack Developer with experience in building and maintaining applications using Next.js for the
+              frontend and Nest.js for the backend, along with Apollo and GraphQL for efficient data management.
+              Successfully integrated Stripe for seamless payment processing, ensuring a secure and user-friendly
+              transaction experience.
+              Additionally, working on a project encompassing a React Native mobile application, contributed to
+              infrastructure enhancements by assisting in the migration of the backend, Played a key role in refactoring
+              and optimizing legacy application code to improve maintainability and performance.
+            </Experience>
+
+            <Experience
               place="PipeFlare"
               dates="JUL 2022 - present"
               position="Senior Web Developer"
@@ -29,7 +43,17 @@
               aspects of the project.
             </Experience>
 
-            <Experience place="Ndark Agency" dates="SEP 2020 - present" position="Founder">
+            <Experience place="STYR Trade" dates="SEP 2022 - DEC 2024" position="Frontend Developer">
+              In my role as a Frontend Developer for the past two years, I have been responsible for leading the
+              frontend development of the Styr Trade website (https://styrtrade.com). This project involved overseeing
+              the design and implementation of user interfaces, ensuring they were both responsive and user-friendly. I
+              worked closely with back-end developers to integrate APIs and other services, providing a seamless
+              experience for users across multiple devices. As the lead on this project, I was responsible for the
+              architecture, maintaining code quality, optimizing performance, and ensuring scalability as the platform
+              evolved.
+            </Experience>
+
+            <Experience place="Ndark Agency" dates="SEP 2020 - NOV 2024" position="Co-Founder">
               Founder and CEO of creative Ndark web agency. Working in a team of professionals in
               their fields: web designers, developers, marketers. Main goal is creation of a
               high‑quality full‑cycle products.
@@ -108,9 +132,9 @@
 </template>
 
 <script>
-export default {};
+export default {}
 </script>
 
 <style lang="scss">
-@import 'Resume';
+@import "Resume";
 </style>

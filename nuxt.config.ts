@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     },
     // pageTransition: { name: 'page', mode: 'out-in' },
     head: {
-      title: 'NDark Agency',
+      title: 'Valice',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -48,7 +48,7 @@ export default defineNuxtConfig({
           hid: 'description',
           name: 'description',
           content:
-            'NDark Agency is a web & mobile app development company. ' +
+            'ValiceLab is a web & mobile app development company. ' +
             'We build for the Web with HTML/CSS, JavaScript, PHP and Agile, ' +
             'providing UI/UX design and convenient website admin features. ' +
             'We work closely with you to design ' +
@@ -58,7 +58,7 @@ export default defineNuxtConfig({
           hid: 'og:description',
           name: 'og:description',
           content:
-            'NDark Agency is a web & mobile app development company. ' +
+            'ValiceLab is a web & mobile app development company. ' +
             'We build for the Web with HTML/CSS, JavaScript, PHP and Agile, ' +
             'providing UI/UX design and convenient website admin features. ' +
             'We work closely with you to design ' +
@@ -67,17 +67,17 @@ export default defineNuxtConfig({
         {
           hid: 'og:site_name',
           name: 'og:site_name',
-          content: 'NDark Agency',
+          content: 'ValiceLab',
         },
         {
           hid: 'apple-mobile-web-app-title',
           name: 'apple-mobile-web-app-title',
-          content: 'NDark Agency',
+          content: 'ValiceLab',
         },
         {
           hid: 'og:title',
           name: 'og:title',
-          content: 'NDark Agency - We develop and design Web & mobile apps',
+          content: 'ValiceLab - We develop and design Web & mobile apps',
         },
         {
           hid: 'og:image',

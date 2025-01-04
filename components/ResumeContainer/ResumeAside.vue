@@ -67,7 +67,7 @@
     <div class="resume__socials">
       <IconHeading icon-name="people" title="Socials" bg-color="#5d64a9" icon-color="#ffffff" />
       <Contact url="https://github.com/blyndaruk" title="GitHub" :target="true" />
-      <Contact url="https://t.me/ndark" title="Telegram" :target="true" />
+      <Contact url="https://t.me/blyndaruk_d" title="Telegram" :target="true" />
       <Contact
         url="https://www.facebook.com/profile.php?id=100001746871522"
         title="Facebook"

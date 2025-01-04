@@ -7,7 +7,7 @@
 <script>
 import * as THREE from 'three';
 import debounce from 'debounce';
-import logo from '~/assets/images/nd-full.svg';
+import logo from '~/assets/images/valice.svg';
 import smokeImg from '~/assets/images/smoke.png';
 
 export default {
@@ -82,7 +82,7 @@ export default {
         blending: THREE.AdditiveBlending,
       });
       const text = new THREE.Mesh(textGeo, textMaterial);
-      text.position.z = 800;
+      text.position.z = 850;
       text.position.y = 20;
       this.scene.add(text);
       this.light = new THREE.DirectionalLight(0xffffff, 0.8);
